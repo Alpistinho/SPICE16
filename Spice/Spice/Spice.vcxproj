@@ -80,15 +80,24 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BJT.h" />
+    <ClInclude Include="Branch.h" />
+    <ClInclude Include="BranchStorage.h" />
     <ClInclude Include="Capacitor.h" />
+    <ClInclude Include="CircuitElement.h" />
     <ClInclude Include="Component.h" />
+    <ClInclude Include="ComponentStorage.h" />
     <ClInclude Include="CurrentControlledCurrentSource.h" />
     <ClInclude Include="CurrentControlledVoltageSource.h" />
     <ClInclude Include="CurrentSource.h" />
+    <ClInclude Include="FrequencySimulation.h" />
     <ClInclude Include="Inductor.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="NodeStorage.h" />
     <ClInclude Include="OpAmp.h" />
     <ClInclude Include="Resistor.h" />
+    <ClInclude Include="Simulation.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Storage.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="VoltageControlledCurrentSource.h" />
     <ClInclude Include="VoltageControlledVoltageSource.h" />
@@ -96,19 +105,28 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BJT.cpp" />
+    <ClCompile Include="Branch.cpp" />
+    <ClCompile Include="BranchStorage.cpp" />
     <ClCompile Include="Capacitor.cpp" />
+    <ClCompile Include="CircuitElement.cpp" />
     <ClCompile Include="Component.cpp" />
+    <ClCompile Include="ComponentStorage.cpp" />
     <ClCompile Include="CurrentControlledCurrentSource.cpp" />
     <ClCompile Include="CurrentControlledVoltageSource.cpp" />
     <ClCompile Include="CurrentSource.cpp" />
+    <ClCompile Include="FrequencySimulation.cpp" />
     <ClCompile Include="Inductor.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="NodeStorage.cpp" />
     <ClCompile Include="OpAmp.cpp" />
     <ClCompile Include="Resistor.cpp" />
+    <ClCompile Include="Simulation.cpp" />
     <ClCompile Include="Spice.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Storage.cpp" />
     <ClCompile Include="VoltageControlledCurrentSource.cpp" />
     <ClCompile Include="VoltageControlledVoltageSource.cpp" />
     <ClCompile Include="VoltageSource.cpp" />
