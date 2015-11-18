@@ -95,6 +95,7 @@
     <ClInclude Include="NodeStorage.h" />
     <ClInclude Include="OpAmp.h" />
     <ClInclude Include="Resistor.h" />
+    <ClInclude Include="ResultsMatrix.h" />
     <ClInclude Include="Simulation.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Storage.h" />
@@ -120,6 +121,7 @@
     <ClCompile Include="NodeStorage.cpp" />
     <ClCompile Include="OpAmp.cpp" />
     <ClCompile Include="Resistor.cpp" />
+    <ClCompile Include="ResultsMatrix.cpp" />
     <ClCompile Include="Simulation.cpp" />
     <ClCompile Include="Spice.cpp" />
     <ClCompile Include="stdafx.cpp">
