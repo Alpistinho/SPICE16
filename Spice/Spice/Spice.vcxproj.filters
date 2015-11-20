@@ -93,6 +93,9 @@
     <ClInclude Include="fileManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CircuitElementStorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -168,6 +171,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="fileManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CircuitElementStorage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -3,7 +3,9 @@
 #include <map>
 #include "storage.h"
 #include "Component.h"
-#include "NodeStorage.h"
+#include "Node.h"
+#include "Branch.h"
+#include "CircuitElementStorage.h"
 
 class ComponentStorage :
 	public Storage
@@ -24,6 +26,11 @@ public:
 private:
 
 	unsigned long componentIdentifier; //limits the component number to 4294967295. Hardly a problem
-	NodeStorage nodeStorage;
+	unsigned long elementsAmount;
+	unsigned long branchesNeededAmount; //how many branches will have its current calculated.
+	
+	//NodeStorage nodeStorage;
+	CircuitElementStorage<Node> nodeStorage;
+	CircuitElementStorage<Branch> branchStorage;
 	std::map<unsigned long, Component> componentMap;
 };

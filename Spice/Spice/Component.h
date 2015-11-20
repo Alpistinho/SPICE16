@@ -15,7 +15,7 @@ public:
 	virtual unsigned getParameterAmount(); //return how many parameter a certain component have
 	virtual ComponentType getComponentType(); //returns which type of component it is
 	virtual void setNode(unsigned, Node*);//number of the node, pointer to the node
-
-	std::string getName();
+	virtual std::vector<std::vector<double>> getFrequencyStamp(double);
+	virtual 
 };
 

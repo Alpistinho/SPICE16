@@ -84,6 +84,7 @@
     <ClInclude Include="BranchStorage.h" />
     <ClInclude Include="Capacitor.h" />
     <ClInclude Include="CircuitElement.h" />
+    <ClInclude Include="CircuitElementStorage.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="ComponentStorage.h" />
     <ClInclude Include="CurrentControlledCurrentSource.h" />
@@ -111,6 +112,7 @@
     <ClCompile Include="BranchStorage.cpp" />
     <ClCompile Include="Capacitor.cpp" />
     <ClCompile Include="CircuitElement.cpp" />
+    <ClCompile Include="CircuitElementStorage.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="ComponentStorage.cpp" />
     <ClCompile Include="CurrentControlledCurrentSource.cpp" />
