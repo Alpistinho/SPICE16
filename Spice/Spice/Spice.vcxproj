@@ -89,6 +89,7 @@
     <ClInclude Include="CurrentControlledCurrentSource.h" />
     <ClInclude Include="CurrentControlledVoltageSource.h" />
     <ClInclude Include="CurrentSource.h" />
+    <ClInclude Include="fileManager.h" />
     <ClInclude Include="FrequencySimulation.h" />
     <ClInclude Include="Inductor.h" />
     <ClInclude Include="Node.h" />
@@ -115,6 +116,7 @@
     <ClCompile Include="CurrentControlledCurrentSource.cpp" />
     <ClCompile Include="CurrentControlledVoltageSource.cpp" />
     <ClCompile Include="CurrentSource.cpp" />
+    <ClCompile Include="fileManager.cpp" />
     <ClCompile Include="FrequencySimulation.cpp" />
     <ClCompile Include="Inductor.cpp" />
     <ClCompile Include="Node.cpp" />
