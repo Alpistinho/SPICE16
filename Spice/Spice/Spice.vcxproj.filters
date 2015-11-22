@@ -60,9 +60,6 @@
     <ClInclude Include="CurrentControlledCurrentSource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CircuitElement.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Node.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -93,7 +90,7 @@
     <ClInclude Include="fileManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CircuitElementStorage.h">
+    <ClInclude Include="CircuitElement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -140,9 +137,6 @@
     <ClCompile Include="CurrentControlledCurrentSource.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CircuitElement.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Node.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -173,7 +167,7 @@
     <ClCompile Include="fileManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CircuitElementStorage.cpp">
+    <ClCompile Include="CircuitElement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

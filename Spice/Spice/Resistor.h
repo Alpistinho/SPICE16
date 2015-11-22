@@ -10,7 +10,15 @@ public:
 
 	//constructs resistor with two nodes and its value
 	Resistor(Node *, Node *, double);
-	void setValue(double);
 	~Resistor(void);
+
+	void setValue(double);
+	double getValue();
+	ComponentType getComponentType(); 
+	void getFrequencyStamp(std::vector<std::vector<std::complex<double>>>*, double);
+
+private:
+	Node* node1;
+	Node* node2;
 };
 

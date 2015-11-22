@@ -84,7 +84,6 @@
     <ClInclude Include="BranchStorage.h" />
     <ClInclude Include="Capacitor.h" />
     <ClInclude Include="CircuitElement.h" />
-    <ClInclude Include="CircuitElementStorage.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="ComponentStorage.h" />
     <ClInclude Include="CurrentControlledCurrentSource.h" />
@@ -111,8 +110,6 @@
     <ClCompile Include="Branch.cpp" />
     <ClCompile Include="BranchStorage.cpp" />
     <ClCompile Include="Capacitor.cpp" />
-    <ClCompile Include="CircuitElement.cpp" />
-    <ClCompile Include="CircuitElementStorage.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="ComponentStorage.cpp" />
     <ClCompile Include="CurrentControlledCurrentSource.cpp" />
@@ -127,6 +124,7 @@
     <ClCompile Include="Resistor.cpp" />
     <ClCompile Include="ResultsMatrix.cpp" />
     <ClCompile Include="Simulation.cpp" />
+    <ClCompile Include="CircuitElement.cpp" />
     <ClCompile Include="Spice.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

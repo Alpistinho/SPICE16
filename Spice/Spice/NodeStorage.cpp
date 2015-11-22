@@ -11,6 +11,10 @@ NodeStorage::~NodeStorage(void)
 {
 }
 
+unsigned long NodeStorage::getNodeAmount() {
+	return nodeMap.size();
+}
+
 Node* NodeStorage::addNode(std::string identifier) {
 	
 	std::map<std::string, Node*>::iterator it;
@@ -22,4 +26,17 @@ Node* NodeStorage::addNode(std::string identifier) {
 		Node* newNode = new Node(identifier);
 		return newNode;
 	}
+}
+
+void NodeStorage::allocateNodeNumbers() {
+
+	unsigned long matrixPosition = 0;
+
+	std::map<std::string, Node*>::iterator it;
+
+	for(it = nodeMap.begin(); it != nodeMap.end(); it++) {
+		it->second->setNodeNumber(matrixPosition);
+		matrixPosition++;
+	}
+	return;
 }
