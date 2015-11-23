@@ -24,7 +24,7 @@ ComponentType Resistor::getComponentType() {
 
 void Resistor::getFrequencyStamp(std::vector<std::vector<std::complex<double>>>* equationSystem, double frequency) {
 	(*equationSystem)[node1->getNodeNumber()][node1->getNodeNumber()] += 1/value;
-	(*equationSystem)[node1->getNodeNumber()][node2->getNodeNumber()] += 1/value;
-	(*equationSystem)[node2->getNodeNumber()][node1->getNodeNumber()] += 1/value;
+	(*equationSystem)[node1->getNodeNumber()][node2->getNodeNumber()] -= 1/value;
+	(*equationSystem)[node2->getNodeNumber()][node1->getNodeNumber()] -= 1/value;
 	(*equationSystem)[node2->getNodeNumber()][node2->getNodeNumber()] += 1/value;
 }

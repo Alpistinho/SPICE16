@@ -1,5 +1,8 @@
 #pragma once
 #include "Component.h"
+#include "Node.h"
+#include "Branch.h"
+
 class VoltageControlledVoltageSource :
 	public Component
 {
@@ -14,5 +17,6 @@ public:
 private:
 
 	Node *node1, *node2, *node3, *node4;
+	Branch *branch1;
 };
 

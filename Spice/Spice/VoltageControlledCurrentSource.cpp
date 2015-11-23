@@ -21,3 +21,12 @@ VoltageControlledCurrentSource::~VoltageControlledCurrentSource(void)
 ComponentType VoltageControlledCurrentSource::getComponentType() {
 	return ComponentType::VoltageControlledCurrentSource;
 }
+
+void VoltageControlledCurrentSource::getFrequencyStamp(std::vector<std::vector<std::complex<double>>>* equationSystem, double frequency) {
+
+	(*equationSystem)[node3->getNodeNumber()][node1->getNodeNumber()] += value;	
+	(*equationSystem)[node4->getNodeNumber()][node1->getNodeNumber()] -= value;
+	(*equationSystem)[node3->getNodeNumber()][node2->getNodeNumber()] -= value;	
+	(*equationSystem)[node4->getNodeNumber()][node2->getNodeNumber()] += value;
+
+}

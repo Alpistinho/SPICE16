@@ -10,7 +10,7 @@ public:
 	BranchStorage(void);
 
 	//adds a new node with the identifier especified. Returns a pointer to the new node if it doesn`t exists or a pointer to the old node if it already exists
-	Branch* addNode(std::string);
+	Branch* addBranch(std::string);
 	~BranchStorage(void);
 
 	Branch* getBranch(unsigned long);//get a branch by its "position". Calling that from 0 to end will give return all the elements 

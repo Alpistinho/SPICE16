@@ -21,3 +21,15 @@ CurrentControlledCurrentSource::~CurrentControlledCurrentSource(void)
 ComponentType CurrentControlledCurrentSource::getComponentType() {
 	return ComponentType::CurrentControlledCurrentSource;
 }
+
+void CurrentControlledCurrentSource::getFrequencyStamp(std::vector<std::vector<std::complex<double>>>* equationSystem, double frequency) {
+
+	(*equationSystem)[node1->getNodeNumber()][branch1->getBranchNumber()] += value;	
+	(*equationSystem)[node2->getNodeNumber()][branch1->getBranchNumber()] -= value;
+
+	(*equationSystem)[node3->getNodeNumber()][branch1->getBranchNumber()] += 1;
+	(*equationSystem)[node4->getNodeNumber()][branch1->getBranchNumber()] -= 1;
+	(*equationSystem)[branch1->getBranchNumber()][node3->getNodeNumber()] -= 1;
+	(*equationSystem)[branch1->getBranchNumber()][node4->getNodeNumber()] += 1;
+
+}
