@@ -9,11 +9,12 @@ class VoltageSource :
 public:
 	VoltageSource(void);
 	~VoltageSource(void);
-	VoltageSource(Node *, Node*, double);
-	void getFrequencyStamp(std::vector<std::vector<std::complex<double>>>*, double, double);
+	VoltageSource(Node *, Node*, double, double);
+	void getFrequencyStamp(std::vector<std::vector<std::complex<double>>>*, double);
 
 private:
 	Node *node1, *node2;
 	Branch *branch1;
 	std::complex<double> value; //the independent sources have modulus and phase components in its value. It is stored as a phasor
+
 };
