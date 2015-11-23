@@ -6,10 +6,11 @@ Capacitor::Capacitor(void)
 {
 }
 
-Capacitor::Capacitor(Node *n1, Node *n2, double capacitance) {
+Capacitor::Capacitor(Node *n1, Node *n2, double capacitance, unsigned long newKey) {
 	node1 = n1;
 	node2 = n2;
 	value = capacitance;
+	key = newKey;
 }
 
 Capacitor::~Capacitor(void)

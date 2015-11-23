@@ -6,12 +6,13 @@ VoltageControlledCurrentSource::VoltageControlledCurrentSource(void)
 {
 }
 
-VoltageControlledCurrentSource::VoltageControlledCurrentSource(Node *n1, Node *n2, Node *n3, Node *n4, double gain) {
+VoltageControlledCurrentSource::VoltageControlledCurrentSource(Node *n1, Node *n2, Node *n3, Node *n4, double gain, unsigned long newKey) {
 	node1 = n1;
 	node2 = n2;
 	node3 = n3;
 	node4 = n4;
 	value = gain;
+	key = newKey;
 }
 
 VoltageControlledCurrentSource::~VoltageControlledCurrentSource(void)

@@ -11,8 +11,8 @@ Branch::~Branch(void)
 {
 }
 
-Branch::Branch(std::string nodeIdentifier) {
-	identifier = nodeIdentifier;
+Branch::Branch(unsigned long branchIdentifier) {
+	identifier = branchIdentifier;
 }
 
 unsigned long Branch::getBranchNumber() {

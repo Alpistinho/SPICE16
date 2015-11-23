@@ -91,6 +91,7 @@
     <ClInclude Include="CurrentSource.h" />
     <ClInclude Include="fileManager.h" />
     <ClInclude Include="FrequencySimulation.h" />
+    <ClInclude Include="inductiveCoupling.h" />
     <ClInclude Include="Inductor.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="NodeStorage.h" />
@@ -117,6 +118,7 @@
     <ClCompile Include="CurrentSource.cpp" />
     <ClCompile Include="fileManager.cpp" />
     <ClCompile Include="FrequencySimulation.cpp" />
+    <ClCompile Include="inductiveCoupling.cpp" />
     <ClCompile Include="Inductor.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="NodeStorage.cpp" />

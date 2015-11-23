@@ -6,10 +6,12 @@ VoltageSource::VoltageSource(void)
 {
 }
 
-VoltageSource::VoltageSource(Node* n1, Node* n2, double current, double phase) {
+VoltageSource::VoltageSource(Node* n1, Node* n2, Branch *b1,double voltage, double phase, unsigned long newKey) {
 	node1 = n1;
 	node2 = n2;
-	value = std::complex<double>(current*std::cos(phase), current*std::sin(phase));
+	branch1 = b1;
+	key = newKey;
+	value = std::complex<double>(voltage*std::cos(phase), voltage*std::sin(phase));
 }
 
 VoltageSource::~VoltageSource(void)

@@ -17,6 +17,8 @@ public:
 	Node* getNode(unsigned long);//get a node by its "position". Calling that from 0 to end will give return all the elements 
 	Node* getNode(std::string); //get a node by its identifier
 
+	bool clearNodeIfEmpty(std::string); //removes a given node if it is not linked to any component anymore
+
 	void allocateNodeNumbers(); //gives each node its position on the matrix
 	unsigned long getNodeAmount();
 

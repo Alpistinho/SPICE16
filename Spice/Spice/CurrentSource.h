@@ -1,13 +1,14 @@
 #pragma once
 #include <complex>
 #include "component.h"
+#include "Node.h"
 
 class CurrentSource :
 	public Component
 {
 public:
 	CurrentSource(void);
-	CurrentSource(Node*, Node*, double, double);
+	CurrentSource(Node*, Node*, double, double, unsigned long);
 	~CurrentSource(void);
 	ComponentType getComponentType(); //returns which type of component it is
 	void getFrequencyStamp(std::vector<std::vector<std::complex<double>>>*, double);

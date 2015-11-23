@@ -20,5 +20,9 @@ double Component::getValue() {
 }
 
 void Component::getFrequencyStamp(std::vector<std::vector<std::complex<double>>>*, double) {
-	return; //there is no stamp for the generc component
+	return; //there is no stamp for the generic component
+}
+
+unsigned long Component::getKey() {
+	return key;
 }

@@ -6,12 +6,14 @@ CurrentControlledCurrentSource::CurrentControlledCurrentSource(void)
 {
 }
 
-CurrentControlledCurrentSource::CurrentControlledCurrentSource(Node *n1, Node *n2, Node *n3, Node *n4, double gain) {
+CurrentControlledCurrentSource::CurrentControlledCurrentSource(Node *n1, Node *n2, Node *n3, Node *n4, Branch *b1, double gain, unsigned long newKey) {
 	node1 = n1;
 	node2 = n2;
 	node3 = n3;
 	node4 = n4;
+	branch1 = b1;
 	value = gain;
+	key = newKey;
 }
 
 CurrentControlledCurrentSource::~CurrentControlledCurrentSource(void)

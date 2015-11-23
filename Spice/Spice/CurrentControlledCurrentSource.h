@@ -8,7 +8,7 @@ class CurrentControlledCurrentSource :
 public:
 	CurrentControlledCurrentSource(void);
 	~CurrentControlledCurrentSource(void);
-	CurrentControlledCurrentSource(Node *, Node *,  Node *, Node *, double);
+	CurrentControlledCurrentSource(Node *, Node *,  Node *, Node *, Branch*, double, unsigned long);
 	ComponentType getComponentType(); //returns which type of component it is
 	void getFrequencyStamp(std::vector<std::vector<std::complex<double>>>*, double);
 

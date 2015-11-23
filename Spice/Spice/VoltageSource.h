@@ -9,7 +9,7 @@ class VoltageSource :
 public:
 	VoltageSource(void);
 	~VoltageSource(void);
-	VoltageSource(Node *, Node*, double, double);
+	VoltageSource(Node *, Node*, Branch *, double, double, unsigned long);
 	void getFrequencyStamp(std::vector<std::vector<std::complex<double>>>*, double);
 
 private:

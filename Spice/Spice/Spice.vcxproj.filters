@@ -93,6 +93,9 @@
     <ClInclude Include="CircuitElement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="inductiveCoupling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -168,6 +171,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CircuitElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="inductiveCoupling.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

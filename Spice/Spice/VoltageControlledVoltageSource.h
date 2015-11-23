@@ -9,7 +9,7 @@ class VoltageControlledVoltageSource :
 public:
 	VoltageControlledVoltageSource(void);
 	~VoltageControlledVoltageSource(void);
-	VoltageControlledVoltageSource(Node *, Node *,  Node *, Node *, double);
+	VoltageControlledVoltageSource(Node *, Node *,  Node *, Node *, Branch *b1, double, unsigned long);
 	ComponentType getComponentType(); //returns which type of component it is
 	void getFrequencyStamp(std::vector<std::vector<std::complex<double>>>*, double);
 	double getValue();

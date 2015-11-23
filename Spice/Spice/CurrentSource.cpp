@@ -6,11 +6,11 @@ CurrentSource::CurrentSource(void)
 {
 }
 
-CurrentSource::CurrentSource(Node* n1, Node* n2, double current, double phase) {
+CurrentSource::CurrentSource(Node* n1, Node* n2, double current, double phase, unsigned long newKey) {
 	node1 = n1;
 	node2 = n2;
 	value = std::complex<double>(current*std::cos(phase), current*std::sin(phase));
-
+	key = newKey;
 }
 
 CurrentSource::~CurrentSource(void)

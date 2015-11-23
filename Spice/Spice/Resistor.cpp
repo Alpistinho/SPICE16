@@ -6,11 +6,14 @@ Resistor::Resistor(void)
 {
 }
 
-Resistor::Resistor(Node* n1, Node* n2, double R)
+Resistor::Resistor(Node* n1, Node* n2, double R, unsigned long newKey)
 {
 	node1 = n1;
+	node1->addComponent(this);
 	node2 = n2;
+	node2->addComponent(this);
 	value = R;
+	key = newKey;
 }
 
 Resistor::~Resistor(void)

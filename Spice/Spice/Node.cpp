@@ -21,3 +21,7 @@ unsigned long Node::getNodeNumber() {
 void Node::setNodeNumber(unsigned long position) {
 	nodeNumber = position;
 }
+
+void Node::addComponent(Component *component) {
+	componentMap[component->getKey()] = component;
+}

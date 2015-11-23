@@ -15,9 +15,9 @@ unsigned long BranchStorage::getBranchAmount() {
 	return branchMap.size();
 }
 
-Branch* BranchStorage::addBranch(std::string identifier) {
+Branch* BranchStorage::addBranch(unsigned long identifier) {
 	
-	std::map<std::string, Branch*>::iterator it;
+	std::map<unsigned long, Branch*>::iterator it;
 
 	it = branchMap.find(identifier);
 	if (it != branchMap.end()) { //found the node
@@ -32,7 +32,7 @@ void BranchStorage::allocateBranchNumbers() {
 
 	unsigned long matrixPosition = 0;
 
-	std::map<std::string, Branch*>::iterator it;
+	std::map<unsigned long, Branch*>::iterator it;
 
 	for(it = branchMap.begin(); it != branchMap.end(); it++) {
 		it->second->setBranchNumber(matrixPosition);

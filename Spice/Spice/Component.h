@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 #include <complex>
-#include "Node.h"
+
 enum class ComponentType {Resistor, Capacitor, Inductor, BJT, CurrentSource, VoltageSource, VoltageControlledVoltageSource, CurrentControlledVoltageSource, VoltageControlledCurrentSource, CurrentControlledCurrentSource, OpAmp, Undefined};
 
 class Component
@@ -17,7 +17,10 @@ public:
 	//virtual void setNode(unsigned, Node*);//number of the node, pointer to the node
 	virtual void getFrequencyStamp(std::vector<std::vector<std::complex<double>>>*, double);
 
+	unsigned long getKey();
+
 protected:
 	double value;
+	unsigned long key; //unique identifier that represents this component
 };
 

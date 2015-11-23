@@ -6,11 +6,12 @@ Inductor::Inductor(void)
 {
 }
 
-Inductor::Inductor(Node *n1, Node *n2, Branch *b1, double inductance) {
+Inductor::Inductor(Node *n1, Node *n2, Branch *b1, double inductance, unsigned long newKey) {
 
 	node1 = n1;
 	node2 = n2;
 	branch1 = b1;
+	key = newKey;
 }
 
 Inductor::~Inductor(void)

@@ -8,7 +8,7 @@ class Inductor :
 public:
 	Inductor(void);
 	~Inductor(void);
-	Inductor(Node *, Node *, Branch *, double);
+	Inductor(Node *, Node *, Branch *, double, unsigned long);
 	ComponentType getComponentType(); //returns which type of component it is
 	void getFrequencyStamp(std::vector<std::vector<std::complex<double>>>*, double);
 	double getValue();

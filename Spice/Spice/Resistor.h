@@ -9,7 +9,7 @@ public:
 	Resistor(void);
 
 	//constructs resistor with two nodes and its value
-	Resistor(Node *, Node *, double);
+	Resistor(Node *, Node *, double, unsigned long);
 	~Resistor(void);
 
 	void setValue(double);

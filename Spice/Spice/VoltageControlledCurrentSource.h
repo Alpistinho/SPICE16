@@ -1,12 +1,13 @@
 #pragma once
 #include "component.h"
+#include "Node.h"
 class VoltageControlledCurrentSource :
 	public Component
 {
 public:
 	VoltageControlledCurrentSource(void);
 	~VoltageControlledCurrentSource(void);
-	VoltageControlledCurrentSource(Node *, Node *,  Node *, Node *, double);
+	VoltageControlledCurrentSource(Node *, Node *,  Node *, Node *, double, unsigned long);
 	ComponentType getComponentType(); //returns which type of component it is
 	void getFrequencyStamp(std::vector<std::vector<std::complex<double>>>*, double);
 	double getValue();
