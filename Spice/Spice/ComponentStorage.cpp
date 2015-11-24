@@ -5,6 +5,7 @@
 
 ComponentStorage::ComponentStorage(void)
 {
+	componentIdentifier = 0;
 }
 
 
