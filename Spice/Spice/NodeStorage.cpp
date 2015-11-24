@@ -24,6 +24,7 @@ Node* NodeStorage::addNode(std::string identifier) {
 		return it->second; //return existing Node
 	} else {
 		Node* newNode = new Node(identifier);
+		nodeMap[identifier] = newNode;
 		return newNode;
 	}
 }

@@ -17,7 +17,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	cout <<'1' <<endl;
 	fileManager.readNetlist("teste.net",&componentStorage,&freqSim);
 	cout << '2' <<endl;
+	cout << componentStorage.getSystemSize();
 	fileManager.writeResults(freqSim.simulateFrequencyResponse(&componentStorage));
+
+	
 
 	return 0;
 }

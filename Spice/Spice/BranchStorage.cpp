@@ -24,6 +24,7 @@ Branch* BranchStorage::addBranch(unsigned long identifier) {
 		return it->second; //return existing Node
 	} else {
 		Branch* newBranch = new Branch(identifier);
+		branchMap[identifier] = newBranch;
 		return newBranch;
 	}
 }
