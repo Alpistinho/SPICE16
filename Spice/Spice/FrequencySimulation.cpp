@@ -5,6 +5,9 @@ using namespace std;
 FrequencySimulation::FrequencySimulation(void)
 {
 	results = new map<double, vector<complex<double>>*>;
+	initFreq = 1;
+	endFreq = 1000000;
+	points = 10;
 
 }
 
@@ -64,7 +67,7 @@ vector<complex<double>>* FrequencySimulation::solveEquationSystem(vector<vector<
 	return result;
 }
 
-map<double,vector<complex<double>>*>* FrequencySimulation::simulateFrequencyResponse(ComponentStorage *componentStorage, double initialFrequency, double endFrequency, unsigned pointsPerOctave) {
+map<double,vector<complex<double>>*>* FrequencySimulation::simulateFrequencyResponse(ComponentStorage *componentStorage, double initialFrequency = 1, double endFrequency = 1000000, unsigned pointsPerOctave = 10) {
 
 	delete results; //delete old results
 	results = new std::map<double, std::vector<std::complex<double>>*>; //allocate new result
@@ -82,4 +85,14 @@ map<double,vector<complex<double>>*>* FrequencySimulation::simulateFrequencyResp
 	}
 
 	return results;
+}
+
+map<double,vector<complex<double>>*>* FrequencySimulation::simulateFrequencyResponse(ComponentStorage *componentStorage) {
+	return simulateFrequencyResponse(componentStorage,initFreq,endFreq,points);
+}
+
+void FrequencySimulation::setParameters(double initial, double end, unsigned pointsPerOctave) {
+	initFreq = initial;
+	endFreq = end;
+	points = pointsPerOctave;
 }

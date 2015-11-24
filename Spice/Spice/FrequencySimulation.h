@@ -15,9 +15,14 @@ public:
 
 
 	std::map<double, std::vector<std::complex<double>>*>* simulateFrequencyResponse(ComponentStorage*, double, double, unsigned);
+	std::map<double, std::vector<std::complex<double>>*>* simulateFrequencyResponse(ComponentStorage*);
+	void setParameters(double, double, unsigned);
 
 private:
 	
+	double initFreq;
+	double endFreq;
+	unsigned points;
 	
 
 	//holds the solutions. The key is the frequency
