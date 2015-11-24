@@ -238,7 +238,7 @@ unsigned ComponentStorage::addOpAmp(std::string n1, std::string n2, std::string 
 }
 
 void ComponentStorage::getFrequencySystem(std::vector<std::vector<std::complex<double>>>* equationSystem, double frequency) {
-	unsigned long systemSize = nodeStorage.getNodeAmount() + branchStorage.getBranchAmount();
+	unsigned long systemSize = getSystemSize();
 	
 	*equationSystem = std::vector<std::vector<std::complex<double>>>(); //clear the matrix
 	equationSystem->resize(systemSize + 1); 
