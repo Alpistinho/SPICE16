@@ -72,7 +72,7 @@ map<double,vector<complex<double>>*>* FrequencySimulation::simulateFrequencyResp
 	delete results; //delete old results
 	results = new std::map<double, std::vector<std::complex<double>>*>; //allocate new result
 	
-	double frequencyStep = pow(2,1/(pointsPerOctave));
+	double frequencyStep = pow(2.0,1.0/(pointsPerOctave));
 	componentStorage->allocateNodeNumbers();
 	unsigned long systemSize = componentStorage->getSystemSize();
 	
