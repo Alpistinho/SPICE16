@@ -29,9 +29,9 @@ Branch* BranchStorage::addBranch(unsigned long identifier) {
 	}
 }
 
-void BranchStorage::allocateBranchNumbers() {
+void BranchStorage::allocateBranchNumbers(unsigned long firstPosition) {
 
-	unsigned long matrixPosition = 0;
+	unsigned long matrixPosition = firstPosition + 1;
 
 	std::map<unsigned long, Branch*>::iterator it;
 

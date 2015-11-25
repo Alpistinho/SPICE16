@@ -30,7 +30,7 @@ void FileManager::readNetlist(string fileName, ComponentStorage *componentStorag
 		while (getline(ss, item, ' ')) {
 			line.push_back(item);
 		}
-		cout <<'8' <<endl;
+		cout <<'8' << endl;
 		cout << str << endl;
 		switch (line[0][0]) {//switch on the first char of the first string. No error treatment
 
@@ -96,10 +96,10 @@ void FileManager::writeResults(map<double,vector<complex<double>>*>* results) {
 	map<double,vector<complex<double>>*>::iterator it;
 	ofstream resultFile;
 	resultFile.open("Results.txt");
-
 	for(it = results->begin(); it != results->end(); it++) {
 		for(unsigned i = 0; i < it->second->size(); i++) {
 			complex<double> value = (*(it->second))[i];
+			cout << abs(value) << ' ' << (180/M_PI)*atan2(real(value),imag(value)) << ',';
 			resultFile << abs(value) << ' ' << (180/M_PI)*atan2(real(value),imag(value)) << ',';
 		}
 		resultFile << endl;

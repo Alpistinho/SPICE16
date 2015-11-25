@@ -18,7 +18,7 @@ public:
 
 	void removeBranch(unsigned long); //remove a branch by the identifier of its component
 
-	void allocateBranchNumbers(); //gives each branch its position on the matrix
+	void allocateBranchNumbers(unsigned long); //gives each branch its position on the matrix
 	unsigned long getBranchAmount();
 
 private:

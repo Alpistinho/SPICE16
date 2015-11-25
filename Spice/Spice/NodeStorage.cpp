@@ -33,13 +33,17 @@ Node* NodeStorage::addNode(std::string identifier) {
 
 void NodeStorage::allocateNodeNumbers() {
 
-	unsigned long matrixPosition = 0;
+	unsigned long matrixPosition = 1; // the 0 is always the ground
 
 	std::map<std::string, Node*>::iterator it;
 
 	for(it = nodeMap.begin(); it != nodeMap.end(); it++) {
-		it->second->setNodeNumber(matrixPosition);
-		matrixPosition++;
+		if(!(it->first.compare("0"))) {
+			it->second->setNodeNumber(0);
+		} else {
+			it->second->setNodeNumber(matrixPosition);
+			matrixPosition++;
+		}
 	}
 	return;
 }
