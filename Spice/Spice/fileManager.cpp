@@ -100,8 +100,8 @@ void FileManager::writeResults(map<double,vector<complex<double>>*>* results) {
 	for(it = results->begin(); it != results->end(); it++) {
 		for(unsigned i = 0; i < it->second->size(); i++) {
 			complex<double> value = (*(it->second))[i];
-			cout << abs(value) << ' ' << (180/M_PI)*atan2(imag(value), real(value)) << ',';
-			resultFile << abs(value) << ' ' << (180/M_PI)*atan2(imag(value), real(value)) << ',';
+			//cout << abs(value) << ' ' << (180/M_PI)*atan2(imag(value), real(value)) << ',';
+			resultFile << abs(value) << ',' << (180/M_PI)*atan2(imag(value), real(value)) << ',';
 		}
 		cout << endl;
 		resultFile << endl;

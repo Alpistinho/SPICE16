@@ -60,14 +60,14 @@ vector<complex<double>>* FrequencySimulation::solveEquationSystem(vector<vector<
 		}
 	}
 
-	cout << endl << "Matrix: " << endl;
+	//cout << endl << "Matrix: " << endl;
 
-	for(unsigned i = 1; i < rows; i++) {
-		for(unsigned j = 1; j < columns; j++) {
-			cout << real(equationSystem[i][j]) << "i" << imag(equationSystem[i][j]) << "  ";
-		}
-		cout << endl;
-	}
+	//for(unsigned i = 1; i < rows; i++) {
+	//	for(unsigned j = 1; j < columns; j++) {
+	//		cout << real(equationSystem[i][j]) << "i" << imag(equationSystem[i][j]) << "  ";
+	//	}
+	//	cout << endl;
+	//}
 
 	vector<complex<double>>* result;
 	result = new vector<complex<double>>;

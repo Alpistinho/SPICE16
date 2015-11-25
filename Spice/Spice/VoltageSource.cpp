@@ -31,3 +31,4 @@ void VoltageSource::getFrequencyStamp(std::vector<std::vector<std::complex<doubl
 	(*equationSystem)[branch1->getBranchNumber()][columns - 1] += value;
 
 }
+	
