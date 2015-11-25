@@ -23,6 +23,6 @@ ComponentType CurrentSource::getComponentType() {
 
 void CurrentSource::getFrequencyStamp(std::vector<std::vector<std::complex<double>>>* equationSystem, double frequency) {
 	unsigned long columns = (*equationSystem)[0].size(); // number of columns the matrix has
-	(*equationSystem)[node1->getNodeNumber()][columns] += value;
-	(*equationSystem)[node2->getNodeNumber()][columns] -= value;
+	(*equationSystem)[node1->getNodeNumber()][columns-1] += value;
+	(*equationSystem)[node2->getNodeNumber()][columns-1] -= value;
 }

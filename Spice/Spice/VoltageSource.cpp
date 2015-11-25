@@ -28,6 +28,6 @@ void VoltageSource::getFrequencyStamp(std::vector<std::vector<std::complex<doubl
 	(*equationSystem)[node1->getNodeNumber()][branch1->getBranchNumber()] += 1;
 	(*equationSystem)[node2->getNodeNumber()] [branch1->getBranchNumber()] -= 1;
 
-	(*equationSystem)[branch1->getBranchNumber()][columns] += value;
+	(*equationSystem)[branch1->getBranchNumber()][columns - 1] += value;
 
 }

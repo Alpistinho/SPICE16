@@ -242,7 +242,7 @@ void ComponentStorage::getFrequencySystem(std::vector<std::vector<std::complex<d
 	
 	*equationSystem = std::vector<std::vector<std::complex<double>>>(); //clear the matrix
 	equationSystem->resize(systemSize + 1); 
-	for(unsigned long i = 0; i < systemSize; i++ ) {
+	for(unsigned long i = 0; i < systemSize + 1; i++ ) {
 		(*equationSystem)[i].resize(systemSize + 2);
 	} //resized the matrix
 
@@ -261,4 +261,5 @@ unsigned long ComponentStorage::getSystemSize(){
 
 void ComponentStorage::allocateNodeNumbers() {
 	nodeStorage.allocateNodeNumbers();
+	branchStorage.allocateBranchNumbers();
 }

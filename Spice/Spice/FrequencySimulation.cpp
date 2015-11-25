@@ -17,8 +17,8 @@ FrequencySimulation::~FrequencySimulation(void)
 }
 
 vector<complex<double>>* FrequencySimulation::solveEquationSystem(vector<vector<complex<double>>>& equationSystem) {
-	unsigned long rows = equationsAmount + 1;
-	unsigned long columns = equationsAmount + 2;
+	unsigned long rows = equationSystem.size();
+	unsigned long columns = equationSystem[0].size();
 
 	unsigned long i,j,l, a;
 	complex<double> biggest, pivot; //  nomes esclarecedores!
