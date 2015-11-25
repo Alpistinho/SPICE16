@@ -13,7 +13,7 @@ NodeStorage::~NodeStorage(void)
 }
 
 unsigned long NodeStorage::getNodeAmount() {
-	return nodeMap.size();
+	return nodeMap.size(); 
 }
 
 Node* NodeStorage::addNode(std::string identifier) {
@@ -31,7 +31,7 @@ Node* NodeStorage::addNode(std::string identifier) {
 	}
 }
 
-void NodeStorage::allocateNodeNumbers() {
+unsigned long NodeStorage::allocateNodeNumbers() {
 
 	unsigned long matrixPosition = 1; // the 0 is always the ground
 
@@ -45,5 +45,5 @@ void NodeStorage::allocateNodeNumbers() {
 			matrixPosition++;
 		}
 	}
-	return;
+	return matrixPosition - 1;//the for iterates one time too much
 }

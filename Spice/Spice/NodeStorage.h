@@ -19,11 +19,12 @@ public:
 
 	bool clearNodeIfEmpty(std::string); //removes a given node if it is not linked to any component anymore
 
-	void allocateNodeNumbers(); //gives each node its position on the matrix
+	unsigned long allocateNodeNumbers(); //gives each node its position on the matrix and returns the last position it has assigned
 	unsigned long getNodeAmount();
 
 private:
 	
 	std::map<std::string, Node*> nodeMap;
+
 };
 

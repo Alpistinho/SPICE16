@@ -93,15 +93,17 @@ void FileManager::readNetlist(string fileName, ComponentStorage *componentStorag
 }
 
 void FileManager::writeResults(map<double,vector<complex<double>>*>* results) {
+	cout << endl << endl;
 	map<double,vector<complex<double>>*>::iterator it;
 	ofstream resultFile;
 	resultFile.open("Results.txt");
 	for(it = results->begin(); it != results->end(); it++) {
 		for(unsigned i = 0; i < it->second->size(); i++) {
 			complex<double> value = (*(it->second))[i];
-			cout << abs(value) << ' ' << (180/M_PI)*atan2(real(value),imag(value)) << ',';
-			resultFile << abs(value) << ' ' << (180/M_PI)*atan2(real(value),imag(value)) << ',';
+			cout << abs(value) << ' ' << (180/M_PI)*atan2(imag(value), real(value)) << ',';
+			resultFile << abs(value) << ' ' << (180/M_PI)*atan2(imag(value), real(value)) << ',';
 		}
+		cout << endl;
 		resultFile << endl;
 	}
 

@@ -260,6 +260,7 @@ unsigned long ComponentStorage::getSystemSize(){
 }
 
 void ComponentStorage::allocateNodeNumbers() {
-	nodeStorage.allocateNodeNumbers();
-	branchStorage.allocateBranchNumbers(nodeStorage.getNodeAmount());
+	unsigned long matrixPosition;
+	matrixPosition = nodeStorage.allocateNodeNumbers();
+	branchStorage.allocateBranchNumbers(matrixPosition);
 }

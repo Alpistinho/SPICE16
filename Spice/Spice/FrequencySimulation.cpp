@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "FrequencySimulation.h"
+#include <iostream>
 
 using namespace std;
 FrequencySimulation::FrequencySimulation(void)
@@ -58,6 +59,16 @@ vector<complex<double>>* FrequencySimulation::solveEquationSystem(vector<vector<
 		  }
 		}
 	}
+
+	cout << endl << "Matrix: " << endl;
+
+	for(unsigned i = 1; i < rows; i++) {
+		for(unsigned j = 1; j < columns; j++) {
+			cout << real(equationSystem[i][j]) << "i" << imag(equationSystem[i][j]) << "  ";
+		}
+		cout << endl;
+	}
+
 	vector<complex<double>>* result;
 	result = new vector<complex<double>>;
 	for (unsigned long i = 1; i < rows; i++) {
