@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "FrequencySimulation.h"
-#include <iostream>
 
 using namespace std;
 FrequencySimulation::FrequencySimulation(void)

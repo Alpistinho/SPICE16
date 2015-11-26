@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "NodeStorage.h"
-#include <iostream>
 
 
 NodeStorage::NodeStorage(void)
@@ -26,7 +25,6 @@ Node* NodeStorage::addNode(std::string identifier) {
 	} else {
 		Node* newNode = new Node(identifier);
 		nodeMap[identifier] = newNode;
-		std::cout << "map size " << nodeMap.size() << std::endl;
 		return newNode;
 	}
 }
