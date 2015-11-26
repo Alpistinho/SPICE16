@@ -223,8 +223,9 @@ unsigned ComponentStorage::addOpAmp(std::string n1, std::string n2, std::string 
 	Node* node2 = nodeStorage.addNode(n2);
 	Node* node3 = nodeStorage.addNode(n3);
 	Node* node4 = nodeStorage.addNode(n4);
+	Branch* branch1 = branchStorage.addBranch(componentIdentifier);
 
-	OpAmp *opAmp = new OpAmp(node1, node2, node3, node4, componentIdentifier); 
+	OpAmp *opAmp = new OpAmp(node1, node2, node3, node4, branch1, componentIdentifier); 
 
 	node1->addComponent(opAmp);
 	node2->addComponent(opAmp);

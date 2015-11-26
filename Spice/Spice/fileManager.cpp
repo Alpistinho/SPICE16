@@ -50,7 +50,6 @@ void FileManager::readNetlist(string fileName, ComponentStorage *componentStorag
 
 		case 'V':
 			cout <<'v' <<endl;
-			cout << 
 			componentStorage->addVoltageSource(line[1], line[2], stod(line[3]), stod(line[4]));
 			break;
 

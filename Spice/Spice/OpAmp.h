@@ -9,7 +9,7 @@ class OpAmp :
 public:
 	OpAmp(void);
 	~OpAmp(void);
-	OpAmp(Node *, Node *, Node *, Node *, unsigned long);
+	OpAmp(Node *, Node *, Node *, Node *, Branch *, unsigned long);
 	ComponentType getComponentType(); //returns which type of component it is
 	void getFrequencyStamp(std::vector<std::vector<std::complex<double>>>*, double);
 	double getValue();
