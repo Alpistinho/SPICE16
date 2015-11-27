@@ -66,7 +66,9 @@ void FileManager::readNetlist(string fileName, ComponentStorage *componentStorag
 		case 'O':
 			componentStorage->addOpAmp(line[1], line[2], line[3], line[4]);
 			break;
-
+		case 'Q':
+			componentStorage->addBJT(line[1], line[2], line[3], stod(line[4]), stod(line[5]), stod(line[6]), stod(line[7]), stod(line[8]), stod(line[9]));
+			break;
 		case '.': //condiguration line
 			freqSim->setParameters(stod(line[2]), stod(line[3]), stod(line[1]));
 			//format is .AC      points   initial  final

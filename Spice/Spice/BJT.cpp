@@ -41,5 +41,17 @@ void BJT::getFrequencyStamp(std::vector<std::vector<std::complex<double>>>* equa
 	(*equationSystem)[node3->getNodeNumber()][node1->getNodeNumber()] += -hoe + (1/hie) * ( (1 + hfe) * hre);
 	(*equationSystem)[node3->getNodeNumber()][node2->getNodeNumber()] -= (1/hie) * (1 + hfe);
 	(*equationSystem)[node3->getNodeNumber()][node3->getNodeNumber()] += hoe + (1/hie) * (1 + hfe) * (1 - hre);
+
+	//parasitic capacitors
 	
+	(*equationSystem)[node1->getNodeNumber()][node1->getNodeNumber()] += std::complex<double>(0,frequency*cbc);
+	(*equationSystem)[node1->getNodeNumber()][node2->getNodeNumber()] -= std::complex<double>(0,frequency*cbc);
+	(*equationSystem)[node2->getNodeNumber()][node1->getNodeNumber()] -= std::complex<double>(0,frequency*cbc);
+	(*equationSystem)[node2->getNodeNumber()][node2->getNodeNumber()] += std::complex<double>(0,frequency*cbc);
+
+	(*equationSystem)[node1->getNodeNumber()][node1->getNodeNumber()] += std::complex<double>(0,frequency*cbe);
+	(*equationSystem)[node1->getNodeNumber()][node3->getNodeNumber()] -= std::complex<double>(0,frequency*cbc);
+	(*equationSystem)[node3->getNodeNumber()][node1->getNodeNumber()] -= std::complex<double>(0,frequency*cbc);
+	(*equationSystem)[node3->getNodeNumber()][node3->getNodeNumber()] += std::complex<double>(0,frequency*cbc);
+
 }
