@@ -3,27 +3,30 @@
 #include <map>
 #include "storage.h"
 #include "Branch.h"
-class BranchStorage : public Storage {
 
-public:
+namespace spiceSimulator {
 
-	BranchStorage(void);
+	class BranchStorage : public Storage {
 
-	//adds a new node with the identifier especified. Returns a pointer to the new node if it doesn`t exists or a pointer to the old node if it already exists
-	Branch* addBranch(unsigned long);
-	~BranchStorage(void);
+	public:
 
-	Branch* getBranch(unsigned long);//get a branch by its "position". Calling that from 0 to end will give return all the elements 
-	Branch* getBranch(std::string); //get a branch by its identifier
+		BranchStorage(void);
 
-	void removeBranch(unsigned long); //remove a branch by the identifier of its component
+		//adds a new node with the identifier especified. Returns a pointer to the new node if it doesn`t exists or a pointer to the old node if it already exists
+		Branch* addBranch(unsigned long);
+		~BranchStorage(void);
 
-	void allocateBranchNumbers(unsigned long); //gives each branch its position on the matrix
-	unsigned long getBranchAmount();
+		Branch* getBranch(unsigned long);//get a branch by its "position". Calling that from 0 to end will give return all the elements 
+		Branch* getBranch(std::string); //get a branch by its identifier
 
-private:
+		void removeBranch(unsigned long); //remove a branch by the identifier of its component
+
+		void allocateBranchNumbers(unsigned long); //gives each branch its position on the matrix
+		unsigned long getBranchAmount();
+
+	private:
 	
-	std::map<unsigned long, Branch*> branchMap; //its mapped by the component identifier
-};
+		std::map<unsigned long, Branch*> branchMap; //its mapped by the component identifier
+	};
 
-
+}

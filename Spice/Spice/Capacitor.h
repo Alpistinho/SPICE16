@@ -2,19 +2,22 @@
 #include "component.h"
 #include "Node.h"
 
-class Capacitor :
-	public Component
-{
-public:
-	Capacitor(void);
-	~Capacitor(void);
-	Capacitor(Node *, Node *, double, unsigned long newKey);
+namespace spiceSimulator {
 
-	ComponentType getComponentType();
-	void getFrequencyStamp(std::vector<std::vector<std::complex<double>>>*, double);
+	class Capacitor :
+		public Component
+	{
+	public:
+		Capacitor(void);
+		~Capacitor(void);
+		Capacitor(Node *, Node *, double, unsigned long newKey);
 
-private:
-	Node *node1, *node2;
+		ComponentType getComponentType();
+		void getFrequencyStamp(std::vector<std::vector<std::complex<double>>>*, double);
 
-};
+	private:
+		Node *node1, *node2;
 
+	};
+
+}

@@ -1,8 +1,12 @@
 #pragma once
-class Storage
-{
-public:
-	Storage(void);
-	~Storage(void);
-};
 
+namespace spiceSimulator {
+
+	class Storage
+	{
+	public:
+		Storage(void);
+		~Storage(void);
+	};
+
+}

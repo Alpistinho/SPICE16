@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "ComponentStorage.h"
 
-
+namespace spiceSimulator {
 
 ComponentStorage::ComponentStorage(void)
 {
@@ -264,4 +264,6 @@ void ComponentStorage::allocateNodeNumbers() {
 	unsigned long matrixPosition;
 	matrixPosition = nodeStorage.allocateNodeNumbers();
 	branchStorage.allocateBranchNumbers(matrixPosition);
+}
+
 }

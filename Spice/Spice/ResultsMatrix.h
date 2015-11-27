@@ -1,8 +1,11 @@
 #pragma once
-class ResultsMatrix
-{
-public:
-	ResultsMatrix(void);
-	~ResultsMatrix(void);
-};
+namespace spiceSimulator {
 
+	class ResultsMatrix
+	{
+	public:
+		ResultsMatrix(void);
+		~ResultsMatrix(void);
+	};
+
+}

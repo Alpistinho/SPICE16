@@ -1,8 +1,11 @@
 #pragma once
-class CircuitElement
-{
-public:
-	CircuitElement(void);
-	~CircuitElement(void);
-};
 
+namespace spiceSimulator {
+
+	class CircuitElement
+	{
+	public:
+		CircuitElement(void);
+		~CircuitElement(void);
+	};
+}

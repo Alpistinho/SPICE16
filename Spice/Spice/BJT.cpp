@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "BJT.h"
 
-
+namespace spiceSimulator {
 BJT::BJT(void)
 {
 }
@@ -53,5 +53,7 @@ void BJT::getFrequencyStamp(std::vector<std::vector<std::complex<double>>>* equa
 	(*equationSystem)[node1->getNodeNumber()][node3->getNodeNumber()] -= std::complex<double>(0,frequency*cbc);
 	(*equationSystem)[node3->getNodeNumber()][node1->getNodeNumber()] -= std::complex<double>(0,frequency*cbc);
 	(*equationSystem)[node3->getNodeNumber()][node3->getNodeNumber()] += std::complex<double>(0,frequency*cbc);
+
+}
 
 }

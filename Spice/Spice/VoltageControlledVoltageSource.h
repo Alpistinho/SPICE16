@@ -3,20 +3,23 @@
 #include "Node.h"
 #include "Branch.h"
 
-class VoltageControlledVoltageSource :
-	public Component
-{
-public:
-	VoltageControlledVoltageSource(void);
-	~VoltageControlledVoltageSource(void);
-	VoltageControlledVoltageSource(Node *, Node *,  Node *, Node *, Branch *b1, double, unsigned long);
-	ComponentType getComponentType(); //returns which type of component it is
-	void getFrequencyStamp(std::vector<std::vector<std::complex<double>>>*, double);
-	double getValue();
+namespace spiceSimulator {
 
-private:
+	class VoltageControlledVoltageSource :
+		public Component
+	{
+	public:
+		VoltageControlledVoltageSource(void);
+		~VoltageControlledVoltageSource(void);
+		VoltageControlledVoltageSource(Node *, Node *,  Node *, Node *, Branch *b1, double, unsigned long);
+		ComponentType getComponentType(); //returns which type of component it is
+		void getFrequencyStamp(std::vector<std::vector<std::complex<double>>>*, double);
+		double getValue();
 
-	Node *node1, *node2, *node3, *node4;
-	Branch *branch1;
-};
+	private:
 
+		Node *node1, *node2, *node3, *node4;
+		Branch *branch1;
+	};
+
+}

@@ -10,19 +10,21 @@
 
 #include "ComponentStorage.h"
 
+namespace spiceSimulator {
 
-//will read and write the text files. Will also be the reference implementation of using the other classes.
-class FileManager
-{
-public:
-	FileManager(void);
-	~FileManager(void);
+	//will read and write the text files. Will also be the reference implementation of using the other classes.
+	class FileManager
+	{
+	public:
+		FileManager(void);
+		~FileManager(void);
 
-	void readNetlist(std::string, ComponentStorage*, FrequencySimulation *);
-	void writeResults(std::map<double,std::vector<std::complex<double>>*>*);
+		void readNetlist(std::string, ComponentStorage*, FrequencySimulation *);
+		void writeResults(std::map<double,std::vector<std::complex<double>>*>*);
 
-private:
+	private:
 
 
-};
+	};
 
+}

@@ -1,6 +1,10 @@
 #include "stdafx.h"
 #include "CircuitElement.h"
 
-CircuitElement::CircuitElement() {}
+namespace spiceSimulator {
 
-CircuitElement::~CircuitElement() {}
+	CircuitElement::CircuitElement() {}
+
+	CircuitElement::~CircuitElement() {}
+
+}
