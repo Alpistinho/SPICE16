@@ -10,7 +10,9 @@ namespace spiceSimulator {
 		public CircuitElement
 	{
 	public:
+
 		friend class NodeStorage;
+
 		Node(void);
 		Node(std::string);
 		~Node(void);

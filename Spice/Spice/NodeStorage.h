@@ -6,9 +6,8 @@
 
 namespace spiceSimulator {
 
-	class NodeStorage :
-		public Storage
-	{
+	class NodeStorage :	public Storage	{
+
 	public:
 
 		NodeStorage(void);

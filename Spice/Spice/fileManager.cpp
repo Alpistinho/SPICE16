@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "FileManager.h"
-#include "FrequencySimulation.h"
 
 namespace spiceSimulator {
 

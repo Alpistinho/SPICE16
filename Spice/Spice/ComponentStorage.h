@@ -28,7 +28,7 @@ namespace spiceSimulator {
 		public Storage
 	{
 	public:
-		friend class FrequencySimulation;
+
 		ComponentStorage(void);
 		~ComponentStorage(void);
 

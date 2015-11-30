@@ -14,7 +14,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	spiceSimulator::ComponentStorage componentStorage;
 	spiceSimulator::FrequencySimulation freqSim;
 	spiceSimulator::FileManager fileManager;
-	fileManager.readNetlist("teste.net",&componentStorage,&freqSim);
+	fileManager.readNetlist("test.net",&componentStorage,&freqSim);
 	fileManager.writeResults(freqSim.simulateFrequencyResponse(&componentStorage));
 
 	

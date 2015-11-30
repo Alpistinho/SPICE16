@@ -9,6 +9,7 @@
 #include <math.h>
 
 #include "ComponentStorage.h"
+#include "FrequencySimulation.h"
 
 namespace spiceSimulator {
 
