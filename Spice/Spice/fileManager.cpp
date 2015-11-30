@@ -92,11 +92,13 @@ namespace spiceSimulator {
 		resultFile.open("Results.txt");
 
 		for(it = results->begin(); it != results->end(); it++) {
+			double frequency = it->first;
+			resultFile << frequency << ",";
 			for(unsigned i = 0; i < it->second->size(); i++) {
 
 				complex<double> value = (*(it->second))[i];
-				double frequency = it->first;
-				resultFile << frequency << "," << abs(value) << ',' << (180/M_PI)*atan2(imag(value), real(value)) << ',';
+				
+				resultFile << abs(value) << ',' << (180/M_PI)*atan2(imag(value), real(value)) << ',';
 
 			}
 			resultFile << endl;

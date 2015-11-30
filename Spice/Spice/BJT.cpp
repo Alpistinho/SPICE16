@@ -18,7 +18,7 @@ BJT::BJT(Node *n1, Node *n2, Node *n3, double HFE, double HIE, double HRE, doubl
 	cbe = CBE;
 	cbc = CBC;
 	key = newKey;
-}
+} 
 
 BJT::~BJT(void)
 {
